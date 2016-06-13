@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 10:36:35 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 10:54:23 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/13 14:24:21 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		keypress(int keycode, void *param)
 	else if (keycode == K_RIGHT && (param))
 		;
 	return (0);
+	//instantiate while loops to allow for held in keys that continue to functions as long as the keycode is = to the appropriate key
 }
 
 int		keyrelease(int keycode, void *param)
