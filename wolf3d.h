@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 09:21:06 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/13 10:11:34 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,17 @@ typedef struct	s_win
 	int			win_x;
 	int			win_y;
 }				t_win;
+
+typedef struct	s_mapinfo
+{
+	char		**map;
+	long int	lines;
+	long int	width;
+}				t_mapinfo;
+
+void		ft_puterror(char *error);
+
+void		free_map(t_mapinfo map);
+t_mapinfo	read_map(char *filename);
 
 #endif
