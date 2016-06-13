@@ -6,20 +6,11 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:08:34 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 11:45:55 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/13 14:15:40 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf3d.h"
-
-int		main_key_hook(int keycode, void *param)
-{
-	if (keycode == ESC)
-		exit(EXIT_SUCCESS);
-	if (param)
-		;
-		return (0);
-}
 
 int		main(int argc, char **argv)
 {

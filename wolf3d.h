@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 11:56:27 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/13 15:10:30 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
 
 # define WIN_X 320
 # define WIN_Y 200
+# define S_X 15
+# define S_Y 15
+# define S_A 0
 
 # define ESC 53
 # define K_UP 126
@@ -42,6 +45,14 @@ typedef struct	s_mapinfo
 	long int	lines;
 	long int	width;
 }				t_mapinfo;
+
+typedef struct	s_player
+{
+	int			x;
+	int			y;
+	int			a;
+}				t_player;
+
 /*error.c*/
 void			ft_puterror(char *error);
 /*hooks.c*/
