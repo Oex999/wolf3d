@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 10:51:15 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/13 10:56:55 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ typedef struct	s_mapinfo
 	long int	width;
 }				t_mapinfo;
 
-void		ft_puterror(char *error);
+void			ft_puterror(char *error);
 
-int			keypress(int keycode, void *param);
-int			keyrelease(int keycode, void *param);
+int				keypress(int keycode, void *param);
+int				keyrelease(int keycode, void *param);
 
-void		free_map(t_mapinfo map);
-t_mapinfo	read_map(char *filename);
+void			free_map(t_mapinfo map);
+t_mapinfo		read_map(char *filename);
 
 #endif
