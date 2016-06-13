@@ -6,7 +6,7 @@
 #    By: oexall <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/13 08:50:18 by oexall            #+#    #+#              #
-#    Updated: 2016/06/13 09:01:22 by oexall           ###   ########.fr        #
+#    Updated: 2016/06/13 09:20:25 by oexall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = wolf3d
 CC = gcc -o
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = 
+SRC = wolf3d.c
 
 LIBMLX = -lmlx -framework OpenGL -framework AppKit
 LIBFT = -L libft -lft
@@ -23,6 +23,7 @@ LIBFT = -L libft -lft
 all: $(NAME)
 
 $(NAME):
+	@clear
 	@echo "Compiling Libft"
 	@make -C libft/ fclean
 	@make -C libft
@@ -30,7 +31,13 @@ $(NAME):
 	@echo "Finished Compiling Libft"
 	@echo "Compiling $(NAME)"
 	@$(CC) $(NAME) $(CFLAGS) $(SRC) $(LIBMLX) $(LIBFT)
-	@echo "Finided compiling $(NAME)"
+	@echo "Finished compiling $(NAME)"
+
+quick:
+	@clear
+	@echo "Compiling $(NAME)"
+	@$(CC) $(NAME) $(CFLAGS) $(SRC) $(LIBMLX) $(LIBFT)
+	@echo "Finished compiling $(NAME)"
 
 clean:
 	@rm -f $(NAME)
