@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:08:34 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 10:56:25 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/13 11:45:55 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		main_key_hook(int keycode, void *param)
 		exit(EXIT_SUCCESS);
 	if (param)
 		;
-	return (0);
+		return (0);
 }
 
 int		main(int argc, char **argv)
