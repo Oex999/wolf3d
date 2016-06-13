@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:08:34 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 10:12:33 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/13 10:48:30 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int		main(int argc, char **argv)
 	win.win_y = WIN_Y;
 	win.mlx = mlx_init();
 	win.win = mlx_new_window(win.mlx, win.win_x, win.win_y, "Wolf3D");
-	mlx_key_hook(win.win, &main_key_hook, (void *)&win);
+	mlx_hook(win.win, 2, (1L << 0), &keypress, &win);
+	mlx_hook(win.win, 3, (1L << 1), &keyrelease, &win);
 	if (!(argc > 1 && argc < 3 ) || !(argv[1]))
 		ft_puterror("main: Invalid Args");
 	map = read_map(argv[1]);
