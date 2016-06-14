@@ -6,7 +6,7 @@
 /*   By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 13:58:49 by ghavenga          #+#    #+#             */
-/*   Updated: 2016/06/13 15:46:55 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/13 15:55:40 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ void	draw_screen()
 	//using the player xy as an origin point.)
 }
 
-void				draw_collumn (t_win *win)
+void				draw_collumn (t_win *win, int collumn)
 {
 	unsigned int	k;
 
-	mlx_put_pixel()
+	k = 0;
+	while (k++ <= WIN_Y)
+		mlx_put_pixel(win, collumn, k);
 }
