@@ -6,7 +6,7 @@
 #    By: oexall <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/13 08:50:18 by oexall            #+#    #+#              #
-#    Updated: 2016/06/13 10:47:00 by oexall           ###   ########.fr        #
+#    Updated: 2016/06/14 08:35:52 by oexall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = wolf3d
 CC = gcc -o
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = wolf3d.c error.c read_file.c hooks.c
+SRC = wolf3d.c error.c read_file.c hooks.c raycasting.c
 
 LIBMLX = -lmlx -framework OpenGL -framework AppKit
 LIBFT = -L libft -lft
