@@ -54,13 +54,21 @@
 /*Structs*/
 typedef struct	s_ray
 {
-	int			beta;
 	int			x;
+	int			ay;
+	int			ax;
+	int			xa;
+	int			ya;
+	int			alpha;
 }				t_ray;
 
 typedef struct	s_consts
 {
 	int			project_dist;
+	int			cen_x;
+	int			cen_y;
+	int			half_fov;
+	int			beta_inc;
 	
 }				t_consts;
 
