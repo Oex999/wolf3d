@@ -6,7 +6,7 @@
 /*   By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 13:58:49 by ghavenga          #+#    #+#             */
-/*   Updated: 2016/06/14 08:42:25 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/16 09:43:46 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	draw_screen()
 }
 
 /*Works by drawing from the bottom upwards*/
-void	draw_collumn(t_win *win, int height, int colour, t_player *s_point)
+void	draw_collumn(t_win *win, int height, int colour, t_point *s_point)
 {
 	unsigned int	y_top;
 	unsigned int	y_cur;
