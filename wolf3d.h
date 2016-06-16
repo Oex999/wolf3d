@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/16 10:11:56 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/16 10:17:46 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@
 # define C_WHITE 0x00FFFFFF
 # define C_SKY 0x003399ff
 # define C_FLOOR 0x00990000
+
+# define C_NORTH 0x009900cc
+# define C_SOUTH 0x00FFFFFF
+# define C_EAST 0x00ff6600
+# define C_WEST 0x00996633
 
 /*Structs*/
 typedef struct	s_win
@@ -81,5 +86,6 @@ t_mapinfo		read_map(char *filename);
 /*raycasting.c*/
 void			draw_collumn(t_win *win, int height, int colour,
 					t_point *s_point);
+/*draw.c*/
 
 #endif
