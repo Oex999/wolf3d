@@ -12,6 +12,17 @@
 
 #include "wolf3d.h"
 
+int		raycast(t_main *info)
+{
+	t_ray	ray;
+	
+	ray.x = 0;
+	while (ray.x < WIN_X)
+	{
+		
+	}	
+}
+
 void	draw_screen()
 {
 

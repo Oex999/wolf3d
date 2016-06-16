@@ -18,15 +18,21 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <unistd.h>
+# include <math>
 # include "libft/libft.h"
 
 /*Constants Defines*/
+	/*window*/
 # define WIN_X 640
 # define WIN_Y 400
+	/*start possition*/
 # define S_X 15
 # define S_Y 15
 # define S_A 0
+	/*player details*/
 # define FOV 64
+# define TILE_SIZE 64
+# define VIEW_HEIGHT 32
 
 /*Key Defines*/
 # define ESC 53
@@ -46,6 +52,18 @@
 # define C_WEST 0x00996633
 
 /*Structs*/
+typedef struct	s_ray
+{
+	int			beta;
+	int			x;
+}				t_ray;
+
+typedef struct	s_consts
+{
+	int			project_dist;
+	
+}				t_consts;
+
 typedef struct	s_win
 {
 	void		*mlx;
@@ -73,6 +91,7 @@ typedef struct	s_main
 	t_win		win;
 	t_mapinfo	map;
 	t_point		player;
+	t_consts	consts;
 }				t_main;
 
 /*error.c*/
