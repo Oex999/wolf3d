@@ -6,19 +6,21 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/16 10:03:20 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/16 10:11:56 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WOLF3D_H
 # define WOLF3D_H
 
+/*Header Defines*/
 # include <mlx.h>
 # include <stdlib.h>
 # include <fcntl.h>
 # include <unistd.h>
 # include "libft/libft.h"
 
+/*Constants Defines*/
 # define WIN_X 640
 # define WIN_Y 400
 # define S_X 15
@@ -26,14 +28,19 @@
 # define S_A 0
 # define FOV 64
 
+/*Key Defines*/
 # define ESC 53
 # define K_UP 126
 # define K_DOWN 125
 # define K_LEFT 123
 # define K_RIGHT 124
 
+/*Color Defines*/
 # define C_WHITE 0x00FFFFFF
+# define C_SKY 0x003399ff
+# define C_FLOOR 0x00990000
 
+/*Structs*/
 typedef struct	s_win
 {
 	void		*mlx;
