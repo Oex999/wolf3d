@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/16 10:19:04 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/16 10:32:42 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,6 @@ t_mapinfo		read_map(char *filename);
 void			draw_collumn(t_win *win, int height, int colour,
 					t_point *s_point);
 /*draw.c*/
-void			draw(t_point *p1, t_point *p2, int color);
+void			draw(t_point *p1, t_point *p2, int color, t_win *win);
 
 #endif
