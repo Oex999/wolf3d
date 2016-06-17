@@ -1,4 +1,5 @@
 /* ************************************************************************** */
+
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   wolf3d.h                                           :+:      :+:    :+:   */
@@ -18,7 +19,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <unistd.h>
-# include <math>
+# include <math.h>
 # include "libft/libft.h"
 
 /*Constants Defines*/
@@ -26,8 +27,8 @@
 # define WIN_X 640
 # define WIN_Y 400
 	/*start possition*/
-# define S_X 15
-# define S_Y 15
+# define S_X 70
+# define S_Y 70
 # define S_A 0
 	/*player details*/
 # define FOV 64
@@ -115,5 +116,8 @@ void			draw_collumn(t_win *win, int height, int colour,
 					t_point *s_point);
 /*draw.c*/
 void			draw(t_point *p1, t_point *p2, int color, t_win *win);
+
+/*read_map.c*/
+int				**get_array(t_mapinfo *map);
 
 #endif
