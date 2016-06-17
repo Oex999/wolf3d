@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/13 15:33:32 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/14 13:32:37 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@
 
 # define WIN_X 320
 # define WIN_Y 200
-# define S_X 15
-# define S_Y 15
-# define S_A 0
-# define FOV 60
+# define FOV 90
 
 # define ESC 53
 # define K_UP 126
@@ -47,12 +44,19 @@ typedef struct	s_mapinfo
 	long int	width;
 }				t_mapinfo;
 
-typedef struct	s_player
+typedef	struct	s_player
 {
-	int			x;
-	int			y;
-	int			a;
+	long int	playerx;
+	long int	playery;
+	long int	anglex;
+	long int	angely;
 }				t_player;
+
+typedef struct	s_gamestate
+{
+	t_mapinfo	mapinfo;
+	t_win		window;
+}				t_gamestate;
 
 /*error.c*/
 void			ft_puterror(char *error);
