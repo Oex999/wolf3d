@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/17 10:06:57 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/20 08:19:25 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,11 @@
 # define TILE_SIZE 64
 # define VIEW_HEIGHT 32
 
-/*English Defines*/
-# define 
+/*Code Defines*/
+# define DELTADISTX ray->deltadistx
+# define DELTADISTY ray->deltadisty
+# define RAYDIRY ray->raydiry
+# define RAYDIRX ray->raydirx
 
 /*Key Defines*/
 # define ESC 53
@@ -93,12 +96,19 @@ typedef struct	s_point
 	int			a;
 }				t_point;
 
+typedef struct	s_movestate
+{
+	int			traverse;
+	int			rotate;
+}				t_movestate;
+
 typedef struct	s_main
 {
 	int			**array;
 	t_win		win;
 	t_mapinfo	map;
 	t_point		player;
+	t_movestate	playermv;
 	t_consts	consts;
 }				t_main;
 
