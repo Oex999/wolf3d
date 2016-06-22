@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/20 08:19:25 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/20 14:26:16 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@
 # define VIEW_HEIGHT 32
 
 /*Code Defines*/
-# define DELTADISTX ray->deltadistx
-# define DELTADISTY ray->deltadisty
-# define RAYDIRY ray->raydiry
-# define RAYDIRX ray->raydirx
+# define RAYDIRY gamestate->ray.raydiry
+# define RAYDIRX gamestate->ray.raydirx
+# define DELTADISTX gamestate->ray.deltadistx
+# define DELTADISTY gamestate->ray.deltadisty
 
 /*Key Defines*/
 # define ESC 53
@@ -64,7 +64,8 @@ typedef struct	s_ray
 	float		deltadisty;
 	float		raydirx;
 	float		raydiry;
-	float		alpha;
+	float		camera;
+	int			wallcontact;
 }				t_ray;
 
 typedef struct	s_consts
@@ -73,7 +74,7 @@ typedef struct	s_consts
 	int			cen_x;
 	int			cen_y;
 	int			half_fov;
-	float		beta_inc;	
+	float		beta_inc;
 }				t_consts;
 
 typedef struct	s_win
@@ -96,19 +97,12 @@ typedef struct	s_point
 	int			a;
 }				t_point;
 
-typedef struct	s_movestate
-{
-	int			traverse;
-	int			rotate;
-}				t_movestate;
-
 typedef struct	s_main
 {
 	int			**array;
 	t_win		win;
 	t_mapinfo	map;
 	t_point		player;
-	t_movestate	playermv;
 	t_consts	consts;
 }				t_main;
 

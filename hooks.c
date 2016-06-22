@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 10:36:35 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/20 08:47:52 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/20 10:26:37 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,15 @@ int		keyrelease(int keycode, t_main *gamestate)
 
 void	move(t_main *gamestate)
 {
-	
+	//insert sin/cos functionality to create consistent movement across squares
+	//at angles
+	BASE_T_SPD
 }
 
 void	rotate(t_main *gamestate)
 {
-	
+	if (gamestate->playermv.rotate == 1)
+		gamestate->player.a == gamestate->player.a + BASE_R_SPD % 360;	
+	else if (gamestate->playermv.rotate == -1)
+		gamestate->player.a == gamestate->player.a - BASE_R_SPD % 360;
 }
