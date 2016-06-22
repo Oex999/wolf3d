@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:09:09 by oexall            #+#    #+#             */
-/*   Updated: 2016/06/20 14:26:16 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/22 16:49:36 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,19 @@
 # define FOV 64
 # define TILE_SIZE 64
 # define VIEW_HEIGHT 32
+# define BASE_R_SPD 0.5
+# define BASE_T_SPD 0.5
 
 /*Code Defines*/
+	/*wolf3d.c*/
+# define MLX gamestate.win.mlx
+# define WIN gamestate.win.mlx
+	/*raycasting.c*/
 # define RAYDIRY gamestate->ray.raydiry
 # define RAYDIRX gamestate->ray.raydirx
 # define DELTADISTX gamestate->ray.deltadistx
 # define DELTADISTY gamestate->ray.deltadisty
+# define IMG gamestate->img.img
 
 /*Key Defines*/
 # define ESC 53
@@ -97,6 +104,21 @@ typedef struct	s_point
 	int			a;
 }				t_point;
 
+typedef struct	s_playermv
+{
+	int			traverse;
+	int			rotate;
+}				t_playermv;
+
+typedef struct	s_img
+{
+	void		*img;
+	char		*d;
+	int			bp;
+	int			s;
+	int			e;
+}				t_img;
+
 typedef struct	s_main
 {
 	int			**array;
@@ -104,13 +126,15 @@ typedef struct	s_main
 	t_mapinfo	map;
 	t_point		player;
 	t_consts	consts;
+	t_playermv	playermv;
+	t_img		img;
 }				t_main;
 
 /*error.c*/
 void			ft_puterror(char *error);
 /*hooks.c*/
-int				keypress(int keycode, void *param);
-int				keyrelease(int keycode, void *param);
+int				keypress(int keycode, t_main *gamestate);
+int				keyrelease(int keycode, t_main *gamestate);
 /*read_file.c*/
 void			free_map(t_mapinfo map);
 t_mapinfo		read_map(char *filename);

@@ -6,7 +6,7 @@
 /*   By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 13:58:49 by ghavenga          #+#    #+#             */
-/*   Updated: 2016/06/20 15:53:46 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/22 16:49:39 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,10 +97,10 @@ int				loop_hook(t_main *gamestate)
 
 	if (e->img.img != NULL)
 	{
-		mlx_destroy_image(e->mlx, e->img.img);
+		mlx_destroy_image(MLX, e->img.img);
 		e->img.img = NULL;
 	}
-	e->img.img = mlx_new_image(e->mlx, WIN_X, WIN_Y);
+	e->img.img = mlx_new_image(MLX, WIN_X, WIN_Y);
 	x = 0;
 	while (x < WIN_X)
 	{
@@ -112,8 +112,9 @@ int				loop_hook(t_main *gamestate)
 		drawline(x, e, &c);
 		x++;
 	}
-	get_timeframe(e);
-	move(e);
-	mlx_put_image_to_window(e->mlx, e->win, e->img.img, 0, 0);
+	//get_timeframe(e);
+	move(gamestate);
+	rotate(gamestate)
+	mlx_put_image_to_window(MLX, WIN, e->img.img, 0, 0);
 	return (0);
 }
